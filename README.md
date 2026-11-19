@@ -1,6 +1,6 @@
 # yap-agent-skills
 
-Free, plain-text skills for AI agents doing research, daily digests, and ghostwriting. Works in Claude Code, Cursor, and Codex.
+Free, plain-text skills for AI agents doing research, daily digests, and ghostwriting. Works in Claude Code, Cursor, Codex, and Grok Bot.
 
 Each skill is a folder with a `SKILL.md` file (YAML frontmatter with `name` and `description`, then instructions). Your agent reads the description and loads the skill when it fits the task.
 
@@ -14,7 +14,7 @@ Each skill is a folder with a `SKILL.md` file (YAML frontmatter with `name` and 
 
 ## Install
 
-Clone the repo, then copy (or symlink) the skill folders you want into your tool's skills folder.
+For Claude Code, Cursor, and Codex: clone the repo, then copy (or symlink) the skill folders you want into your tool's skills folder.
 
 ```bash
 git clone https://github.com/yap-builder/yap-agent-skills.git
@@ -52,6 +52,9 @@ cp -r skills/* ~/.agents/skills/
 **One folder for Cursor and Codex:** both read `~/.agents/skills/`, so installing there covers both.
 
 Restart your tool after installing so it picks up new skills. Folder names must match the `name` in each `SKILL.md`.
+
+### Grok Bot
+Send a bot the repo link and ask it to save the skills.
 
 ## Tools the skills expect
 The skills are tool-agnostic. They work best when your agent has:

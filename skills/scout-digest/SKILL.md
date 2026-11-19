@@ -17,17 +17,19 @@ The user names the topic. You propose defaults for scope, mode, and time window,
 1. **Confirm the topic and defaults.** The user names the topic. Propose defaults for scope (for example: "general crypto: majors, DeFi, regulation, hacks. No memecoins."), mode (`digest`, `alert`, or both), and the window (default: last 24 hours). Only ask the user to confirm them.
 2. **Build the source list, in this order:**
    1. **Official sources:** project and company blogs, docs, changelogs, GitHub releases, status pages, regulator and filing sites.
-   2. **Data:** the main data sites for the field (for crypto: block explorers, DefiLlama, on-chain dashboards).
+   2. **Data:** the main data sites for the field (for crypto: block explorers, DefiLlama, on-chain dashboards; for AI: benchmarks and leaderboards).
    3. **Trusted news:** outlets that link to their sources. Skip sites that rewrite others without links.
    4. **Newsletters:** good free newsletters on the topic, read on the web.
    5. **People (optional, needs X/Twitter access):** official project accounts, founders, researchers, and reporters other good sources keep citing.
-3. **Vet each person before adding them:**
-   - Real, checkable work (shipped code, published research, accurate past reporting or calls).
-   - Mostly original posts that link sources.
-   - A quick search shows no rugs, impersonation, or paid shilling.
-   - Skip giveaway accounts, engagement farms, unsourced "100x" calls, and aggregators that never link a source.
-4. **Show the user a short list** with one reason per entry (for example "core dev at X", "broke the Y hack first"). The user approves or removes names. Never ask the user to come up with names.
-5. **Save the setup** in a file (for example `scout-config.md`) and reuse it every run. Include an **Out of scope** line (topics or sources to skip). Every few weeks, drop sources that went quiet or turned into promo feeds, and suggest replacements. This needs a scheduler (cron, a scheduled task, etc.). If none is available, tell the user once, and do the check at the next run instead.
+3. **Vet every source before adding it:**
+   - Every site and handle exists and is the official one (linked from the project's own site). This applies to all sources, not only people.
+   - For people, also check:
+     - Real, checkable work (shipped code, published research, accurate past reporting or calls).
+     - Mostly original posts that link sources.
+     - A quick search shows no rugs, impersonation, or paid shilling.
+     - Skip giveaway accounts, engagement farms, unsourced "100x" calls, and aggregators that never link a source.
+4. **Show the user a short list** with one link and one reason per entry (for example "core dev at X", "broke the Y hack first"). The user approves or removes entries. Never ask the user to come up with sources.
+5. **Save the setup** in a file (for example `scout-config.md`) and reuse it every run. Include an **Out of scope** line (topics or sources to skip). Every few weeks, drop sources that went quiet or turned into promo feeds, and suggest replacements. This needs a scheduler: first look for the app's own scheduling (routines, scheduled tasks), with cron as a fallback. If there's neither, tell the user once, and do the check at the next run instead.
 
 Sources 1 to 4 work with plain web search and no API keys. People on X are a bonus for users with X access; without it, skip them and say so once.
 
@@ -50,7 +52,7 @@ Read `scout-log.md` first (if it exists) and skip items already covered, unless 
 **<Topic> digest, <date>**
 
 1. **<What happened, one line>**
-   Why it matters: <one line>
+   Why it matters: <one line: what changes for the reader, not more details about the story>
    Source: <primary link> (+ <second link> if useful)
 
 2. ...
@@ -69,7 +71,7 @@ Run more often (for example two or three times a day) but only send a message wh
 - A regulation or court decision that changes the rules.
 - A major launch or shutdown in the user's lanes.
 
-This needs a scheduler (cron, a scheduled task, etc.). If none is available, tell the user once, and do the check at the next run instead.
+This needs a scheduler: first look for the app's own scheduling (routines, scheduled tasks), with cron as a fallback. If there's neither, tell the user once, and do the check at the next run instead.
 
 If nothing clears the bar, send nothing. When something does, send one or two lines: what happened, why it matters, the link. Don't repeat an alert in the next digest unless there is new information.
 

@@ -11,11 +11,14 @@ Draft social posts in the user's voice. The user posts. You never publish.
 The user wants a post, thread, or reply drafted from a link, some raw text, a voice note, or a topic.
 
 ## Setup (ask once, then reuse)
-Keep a short **style notes** file, for example `style-notes.md`. It holds:
+Keep a short **style notes** file, for example `style-notes.md`. Build it from the user's 10 to 20 most recent original posts. Skip replies and reposts. It holds:
 - A few do's and don'ts: casing, line breaks, whether handles should be clickable, words or punctuation they dislike, tone.
+- **Signature moves:** openers, closers, recurring formats, slang.
 - The 3 to 5 newest shipped examples (your draft vs what they posted, or the final text). Drop the oldest when you add a new one.
 
-If the file does not exist yet, draft a first pass from their recent posts and ask them to confirm it. If you can't read their posts (no X access), ask them to paste 3 to 5 recent ones.
+Do rules and signature moves get one real example from the user's posts. Don't rules say where they came from (the user's correction or a clear pattern). Keep the style of main posts and the style of replies apart. If the user wants replies drafted too, also read about 10 of their recent replies and mark those rules "(replies only)".
+
+If the file does not exist yet, draft a first pass and ask them to confirm it. Wait for their confirm before you write the first draft. If you can't read their posts (no X access), ask them to paste their recent original posts (10 to 20 if they can).
 
 Also keep a **drafts log** file, `drafts-log.md`. For each post it holds:
 - The original draft, word for word.
@@ -43,7 +46,7 @@ Offer 1 to 3 options, labeled, for example:
 - Deeper (a thread or a longer take)
 - Shortest (one tight line)
 
-Follow the style card in the notes: casing, line breaks, clickable handles, banned words and punctuation. Match their voice. No hype they would not use.
+Follow the style card in the notes: casing, line breaks, clickable handles, banned words and punctuation, signature moves. Use "(replies only)" rules for replies only. Match their voice. No hype they would not use.
 
 The option the user picks is what gets logged as the original draft. Save that text, word for word, to `drafts-log.md`.
 
@@ -56,13 +59,13 @@ When the user asks for a change:
 
 ### 6. Ship
 If a drafting tool is available (for example Typefully or Buffer), push the approved text there as an **unscheduled draft**. The user posts it.
-Never publish, schedule, or post unless the user gives an explicit yes to the exact text.
+Never publish, schedule, or post, even after a yes. The user always posts.
 
 ### 7. Learn loop
 Keep usage light. Do not scan their timeline on a schedule.
-- When the user corrects you in chat, save a one-line rule in the style notes.
+- When the user corrects you in chat, save a one-line rule in the style notes. A new correction replaces any rule it conflicts with.
 - After they post something you drafted, compare your draft to the live post when the user next opens a session or shares the post link. Only check posts you drafted. If they changed something, save a one-line lesson. Add the final posted text, with date and link, to `drafts-log.md`.
-- Keep the notes short: a few do's and don'ts, plus the 3 to 5 newest shipped examples. Drop the oldest example when a new one comes in.
+- Keep the notes short: a few do's and don'ts, the signature moves, plus the 3 to 5 newest shipped examples. Drop the oldest example when a new one comes in.
 - If their own posted text contradicts a rule (they used a word the notes still ban), revise or drop that rule.
 
 ## Export history (optional, on request)
@@ -75,7 +78,7 @@ When the user asks for a record of their posts, read `drafts-log.md` and build o
 Read-only: never edit, publish, or delete anything while exporting. Quote text exactly and never rebuild a missing draft from memory. Write "unknown" when no source supports who made a change, and list gaps at the end (missing drafts, unreadable sources). Output one Markdown file, plus a PDF if a converter such as pandoc is available.
 
 ## Hard rules
-- Draft only. Never publish, schedule, or post without an explicit yes to the exact text.
+- Draft only. Never publish, schedule, or post, even after a yes. The user always posts. Saving an unscheduled draft in a drafting tool is fine.
 - Never invent claims, numbers, quotes, or events.
 - Never overwrite the user's edits.
 - Don't message other people or agents on your own.
@@ -85,10 +88,14 @@ Read-only: never edit, publish, or delete anything while exporting. Quote text e
 # Style notes
 
 ## Do
-- ...
+- rule. Example: "..."
+- (replies only) rule. Example: "..."
 
 ## Don't
-- ...
+- rule. Source: user correction / clear pattern
+
+## Signature moves
+- opener / closer / format / slang. Example: "..."
 
 ## Latest shipped (newest first, keep 3 to 5)
 - YYYY-MM-DD: lesson. Draft had "..."; posted: "..."

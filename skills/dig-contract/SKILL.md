@@ -17,10 +17,10 @@ The user shares a link, a claim, a project, a funding raise, a product, or asks 
 
 ## Flow
 1. **Quick ack.** One short line, then do the work. Don't narrate every step.
-2. **Quick check first (about 2 minutes).** Test the core claim before a full dig: does the thing exist, is the headline number or date real, is there any verifiable data at all. If the claim is false or there is nothing verifiable, stop and send a short note in chat only, with no file: what the claim said, what is actually true, and the sources. An item with no real data gets one line ("nothing verifiable found") and is never padded into a longer dig.
+2. **Quick check first (about 2 minutes, a guide, not a cutoff).** Test the core claim before a full dig: does the thing exist, is the headline number or date real, is there any verifiable data at all. If the claim is false or there is nothing verifiable, stop and send a short note in chat only, with no file: what the claim said, what is true, and the sources with links. Time-stamp your own reads. An item with no real data gets one line ("nothing verifiable found") and is never padded into a longer dig. If the quick check can't settle the claim, go on to the full dig.
 3. **Research.** Use your web search tool, plus an X/Twitter search tool if you have one. Prefer primary sources (the project site, docs, filings, founder posts, code repos) over recaps and news rewrites.
-4. **Own on-chain read.** When a claim involves funds, wallets, a token, or a protocol, check the chain or the protocol's public API yourself before writing: balances, pool state, debts, transfers. Use a block explorer, a public RPC, or the protocol's API. Read-only. Label it as your own read with the time and time zone. If you skip a chain read that this step calls for, say why in the brief (for example: no public contract, the explorer or API was down, the claim was only about a team or a document).
-5. **Spot-check.** Confirm key claims across more than one source. If sources conflict, say so. Say what you did **not** check. Time-stamp your own reads and first-party checks with the time and time zone.
+4. **Own on-chain read.** When a claim involves funds, wallets, a token, or a protocol, check the chain or the protocol's public API yourself before writing: balances, pool state, debts, transfers. Use a block explorer, a public RPC, or the protocol's API. Read-only. Label it as an own chain read with the time and time zone. If you skip a chain read that this step calls for, say why in the brief (for example: no public contract, the explorer or API was down, the claim was only about a team or a document).
+5. **Spot-check.** Confirm key claims across more than one source. If sources conflict, say so. Say what you did **not** check. Add the time and time zone to anything you read yourself. That is a time stamp, not a new label: each fact still gets one of the four labels below.
 6. **Sentiment** (only when public opinion matters). Read several posts from different sides and weight by reach. One viral take is not sentiment.
 7. **Self-challenge (required, every dig).** Before sending, reread the findings as a hostile critic. What is the weakest fact? What would make the bottom line wrong? Do two of your own facts contradict each other? Fix it or flag it. Put the self-challenge in the brief. Never skip this section on a full dig.
 8. **Deliver.** For a full dig, always write a file with the brief (500 words or less, hard cap) on top and a **Details** section below it in the same file, then share the path and send the brief in chat. If the quick check ended the dig (the claim is false or nothing is verifiable), send the short note in chat only. Do not write a file.
@@ -31,7 +31,7 @@ On a full dig, the brief is the top of the file and the text you send in chat. I
 - **One line:** what it is, or what the claim says.
 - **Key facts**, each with a real source link. Label every fact as one of:
   - from a page (quote or cite it)
-  - someone else's measurement
+  - someone else's measurement (any number from a third party, such as Similarweb, a dashboard, or a report, even when you read it yourself)
   - own calculation (show the inputs)
   - own chain read (with time and time zone)
 - **Sentiment**, reach-weighted, if relevant.
