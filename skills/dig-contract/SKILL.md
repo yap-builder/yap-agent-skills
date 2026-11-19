@@ -26,7 +26,7 @@ The user shares a link, a claim, a project, a funding raise, a product, or asks 
 8. **Deliver.** For a full dig, always write a file with the brief (500 words or less, hard cap) on top and a **Details** section below it in the same file. Before writing the file, count the brief's words. If it is over 500, move recaps into Details until it fits. Then share the path and paste the brief into chat exactly as it is in the file. Don't rewrite it. If the quick check ended the dig (the claim is false or nothing is verifiable), send the short note in chat only. Do not write a file.
 
 ## Brief shape (same every time, 500 words or less, hard cap)
-On a full dig, the brief is the top of the file and the text you send in chat. It is 500 words or less. That is a cap, not a goal. Anything that does not fit goes under **Details** in the same file, never into a longer brief. If the quick check ended the dig, there is no file and no brief; the short note stays in chat only.
+On a full dig, the brief is the top of the file and the text you send in chat. It is 500 words or less. That is a cap, not a goal. Aim for about 450 words, so a rough count still lands under 500. Anything that does not fit goes under **Details** in the same file, never into a longer brief. If the quick check ended the dig, there is no file and no brief; the short note stays in chat only.
 
 - **One line:** what it is, or what the claim says.
 - **Key facts**, each with a real source link. Label every fact as one of:
