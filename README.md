@@ -56,6 +56,13 @@ Restart your tool after installing so it picks up new skills. Folder names must 
 ### Grok Bot
 Send a bot the repo link and ask it to save the skills.
 
+## Tested
+- Claude Code with Claude Opus 5.5 (November 2026): all three skills were picked up from their descriptions alone and followed their steps.
+- Grok Bot (November 2026): all three skills ran end to end.
+- Cursor and Codex: install paths follow their docs, not tested live yet.
+
+Tried a skill on another model or tool? Open an issue and say what worked and what didn't: https://github.com/yap-builder/yap-agent-skills/issues
+
 ## Tools the skills expect
 The skills are tool-agnostic. They work best when your agent has:
 - Web search and page fetch
