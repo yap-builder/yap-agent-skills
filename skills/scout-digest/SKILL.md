@@ -21,7 +21,7 @@ The user names the topic. You propose defaults for scope, mode, and time window,
    3. **Trusted news:** outlets that link to their sources. Skip sites that rewrite others without links.
    4. **Newsletters:** good free newsletters on the topic, read on the web.
    5. **People (optional, needs X/Twitter access):** official project accounts, founders, researchers, and reporters other good sources keep citing.
-3. **Vet every source before adding it:**
+3. **Vet every source.** Open each source's page yourself before adding it. A search result is not a check.
    - Every site and handle exists and is the official one (linked from the project's own site). This applies to all sources, not only people.
    - For people, also check:
      - Real, checkable work (shipped code, published research, accurate past reporting or calls).
@@ -36,18 +36,18 @@ Sources 1 to 4 work with plain web search and no API keys. People on X are a bon
 ## Each run
 Read `scout-log.md` first (if it exists) and skip items already covered, unless there is a real update.
 
-1. **Collect.** Read everything from the sources inside the window. Use your web search or fetch tool for sites, and an X/Twitter read tool if you have one for accounts. Skip reposts and replies unless they add new facts.
+1. **Collect.** Start from the sources in scout-config.md and open their pages. Read everything from the sources inside the window. Use your web search or fetch tool for sites, and an X/Twitter read tool if you have one for accounts. Skip reposts and replies unless they add new facts.
 2. **Drop noise.**
    - Paid partnerships, sponsored posts, and ads. Skip them, or tag them clearly as paid if they are genuinely news.
    - Rumors with no source.
    - The same story told five times. Keep the best primary source.
    - Anything already covered in the last digest, unless there is a real update.
-3. **Verify.** For each item you keep, find the primary source (the official post, the filing, the transaction, the release). If a claim involves funds or a protocol, a quick read-only check on a block explorer or the protocol's API is better than trusting a screenshot. If you can't verify it, either drop it or mark it "unconfirmed".
+3. **Verify.** For each item you keep, find the primary source (the official post, the filing, the transaction, the release). If a claim involves funds or a protocol, a quick read-only check on a block explorer or the protocol's API is better than trusting a screenshot. A news article is not the primary source. Open the official post, filing or release. If you can't, either drop the item or mark it "unconfirmed".
 4. **Rank.** Order by how much it changes things for someone following this topic: money moved, rules changed, products shipped, security incidents, big shifts in sentiment.
 5. **Write** the digest (shape below).
 6. **Log.** Append what you covered to `scout-log.md`, so the next run can skip those items.
 
-## Digest shape (aim for 5 to 8 items, under about 400 words)
+## Digest shape (up to 8 items, under about 400 words)
 ```
 **<Topic> digest, <date>**
 
@@ -62,7 +62,7 @@ Read `scout-log.md` first (if it exists) and skip items already covered, unless 
 - Lead with the biggest item.
 - One idea per item. No filler, no hype words.
 - Every item has at least one link. No link, no item.
-- If it was a quiet day, say so in one line. Don't pad.
+- Stay inside the window, including on the first run. If only a few items clear it, send only those. If none do, say it was a quiet day in one line. Never fill the digest with older items.
 
 ## Alert mode (silent unless big)
 Run more often (for example two or three times a day) but only send a message when something clears a high bar, such as:
