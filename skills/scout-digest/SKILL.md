@@ -61,6 +61,7 @@ Read `scout-log.md` first (if it exists) and skip items already covered, unless 
 ```
 - Lead with the biggest item.
 - One idea per item. No filler, no hype words.
+- Why it matters is one sentence on what changes for the reader. Prices, specs and scores are details: put them in the headline or leave them out.
 - Every item has at least one link. No link, no item.
 - Stay inside the window, including on the first run. If only a few items clear it, send only those. If none do, say it was a quiet day in one line. Never fill the digest with older items.
 
