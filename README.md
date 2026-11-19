@@ -33,7 +33,7 @@ cp -r skills/* ~/.claude/skills/
 ### Cursor
 - Personal: `~/.cursor/skills/` (or `~/.agents/skills/`)
 - One project: `.cursor/skills/` (or `.agents/skills/`) in the project root
-- Cursor also reads `.claude/skills/` and `~/.claude/skills/`, so a Claude Code install works in Cursor too.
+- Cursor also reads `.claude/skills/`, `~/.claude/skills/`, `.codex/skills/`, and `~/.codex/skills/`, so a Claude Code or Codex install works in Cursor too.
 
 ```bash
 mkdir -p ~/.cursor/skills
@@ -43,7 +43,6 @@ cp -r skills/* ~/.cursor/skills/
 ### Codex
 - Personal: `~/.agents/skills/`
 - One project: `.agents/skills/` in the repo (Codex scans from where you launch it up to the repo root)
-- Older Codex setups used `~/.codex/skills/`, which may still work.
 
 ```bash
 mkdir -p ~/.agents/skills

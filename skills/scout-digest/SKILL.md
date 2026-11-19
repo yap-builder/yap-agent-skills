@@ -2,9 +2,7 @@
 name: scout-digest
 description: >-
   Use when the user wants a short recurring digest on a topic from a list of
-  sources or X/Twitter accounts: what happened, why it matters, and links.
-  Keeps only verifiable sources and people with a good track record, skips
-  noise, and can run in a silent alert mode that only speaks up for big news.
+  sources or X/Twitter accounts, or an alert only when something big happens.
 ---
 # Scout digest
 
@@ -14,9 +12,9 @@ Turn a list of sources on one topic into a short digest a busy person can read i
 The user wants a daily (or regular) roundup of a topic such as crypto, AI, gaming, or a market, from accounts and sites they trust. Also when they want an alert only when something big happens.
 
 ## Setup (the agent builds it, the user approves it)
-The user only names the topic. Do the rest yourself.
+The user names the topic. You propose defaults for scope, mode, and time window, and only ask the user to confirm them. Then do the rest yourself.
 
-1. **Ask for the topic and scope.** For example: "general crypto: majors, DeFi, regulation, hacks. No memecoins." Also ask the mode (`digest`, `alert`, or both) and the window (default: last 24 hours).
+1. **Confirm the topic and defaults.** The user names the topic. Propose defaults for scope (for example: "general crypto: majors, DeFi, regulation, hacks. No memecoins."), mode (`digest`, `alert`, or both), and the window (default: last 24 hours). Only ask the user to confirm them.
 2. **Build the source list, in this order:**
    1. **Official sources:** project and company blogs, docs, changelogs, GitHub releases, status pages, regulator and filing sites.
    2. **Data:** the main data sites for the field (for crypto: block explorers, DefiLlama, on-chain dashboards).
@@ -29,11 +27,13 @@ The user only names the topic. Do the rest yourself.
    - A quick search shows no rugs, impersonation, or paid shilling.
    - Skip giveaway accounts, engagement farms, unsourced "100x" calls, and aggregators that never link a source.
 4. **Show the user a short list** with one reason per entry (for example "core dev at X", "broke the Y hack first"). The user approves or removes names. Never ask the user to come up with names.
-5. **Save the setup** in a file (for example `scout-config.md`) and reuse it every run. Every few weeks, drop sources that went quiet or turned into promo feeds, and suggest replacements.
+5. **Save the setup** in a file (for example `scout-config.md`) and reuse it every run. Include an **Out of scope** line (topics or sources to skip). Every few weeks, drop sources that went quiet or turned into promo feeds, and suggest replacements. This needs a scheduler (cron, a scheduled task, etc.). If none is available, tell the user once, and do the check at the next run instead.
 
 Sources 1 to 4 work with plain web search and no API keys. People on X are a bonus for users with X access; without it, skip them and say so once.
 
 ## Each run
+Read `scout-log.md` first (if it exists) and skip items already covered, unless there is a real update.
+
 1. **Collect.** Read everything from the sources inside the window. Use your web search or fetch tool for sites, and an X/Twitter read tool if you have one for accounts. Skip reposts and replies unless they add new facts.
 2. **Drop noise.**
    - Paid partnerships, sponsored posts, and ads. Skip them, or tag them clearly as paid if they are genuinely news.
@@ -43,7 +43,7 @@ Sources 1 to 4 work with plain web search and no API keys. People on X are a bon
 3. **Verify.** For each item you keep, find the primary source (the official post, the filing, the transaction, the release). If a claim involves funds or a protocol, a quick read-only check on a block explorer or the protocol's API is better than trusting a screenshot. If you can't verify it, either drop it or mark it "unconfirmed".
 4. **Rank.** Order by how much it changes things for someone following this topic: money moved, rules changed, products shipped, security incidents, big shifts in sentiment.
 5. **Write** the digest (shape below).
-6. **Log.** Keep a short list of what you covered, so the next run doesn't repeat it.
+6. **Log.** Append what you covered to `scout-log.md`, so the next run can skip those items.
 
 ## Digest shape (aim for 5 to 8 items, under about 400 words)
 ```
@@ -68,6 +68,8 @@ Run more often (for example two or three times a day) but only send a message wh
 - A large confirmed fund flow, raise, or acquisition.
 - A regulation or court decision that changes the rules.
 - A major launch or shutdown in the user's lanes.
+
+This needs a scheduler (cron, a scheduled task, etc.). If none is available, tell the user once, and do the check at the next run instead.
 
 If nothing clears the bar, send nothing. When something does, send one or two lines: what happened, why it matters, the link. Don't repeat an alert in the next digest unless there is new information.
 

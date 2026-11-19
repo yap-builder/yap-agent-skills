@@ -1,10 +1,7 @@
 ---
 name: ghostwriter
 description: >-
-  Use when the user wants an AI to draft social posts in their voice. Drafts
-  only, never publishes. Reads a short style notes file before every draft,
-  offers 1 to 3 options, and learns from the user's corrections and from what
-  they actually posted. Can also export a draft vs posted history on request.
+  Use when the user wants an AI to draft social posts in their voice.
 ---
 # Ghostwriter
 
@@ -18,7 +15,14 @@ Keep a short **style notes** file, for example `style-notes.md`. It holds:
 - A few do's and don'ts: casing, line breaks, whether handles should be clickable, words or punctuation they dislike, tone.
 - The 3 to 5 newest shipped examples (your draft vs what they posted, or the final text). Drop the oldest when you add a new one.
 
-If the file does not exist yet, draft a first pass from their recent posts and ask them to confirm it.
+If the file does not exist yet, draft a first pass from their recent posts and ask them to confirm it. If you can't read their posts (no X access), ask them to paste 3 to 5 recent ones.
+
+Also keep a **drafts log** file, `drafts-log.md`. For each post it holds:
+- The original draft, word for word.
+- Each change, tagged by who made it (you at their request, you after a fact check, or the user's own edit).
+- The final posted text, word for word, with date and link.
+
+When you offer 1 to 3 options, log the option the user picks as the original draft. In step 5, back up the current draft here before you change it, and log each change tagged by who made it (you at their request, you after a fact check, or the user's own edit). When they post, add the final text with date and link. Export history reads from this file.
 
 ## Flow
 
@@ -41,10 +45,12 @@ Offer 1 to 3 options, labeled, for example:
 
 Follow the style card in the notes: casing, line breaks, clickable handles, banned words and punctuation. Match their voice. No hype they would not use.
 
+The option the user picks is what gets logged as the original draft. Save that text, word for word, to `drafts-log.md`.
+
 ### 5. Revise
 When the user asks for a change:
 - Re-read their latest live draft first (in chat or in the drafting tool). Do not edit a stale copy.
-- Back up the current draft before you change it.
+- Back up the current draft to `drafts-log.md` before you change it, and log each change tagged by who made it (you at their request, you after a fact check, or the user's own edit).
 - Change only what they asked.
 - Never overwrite their edits.
 
@@ -55,12 +61,12 @@ Never publish, schedule, or post unless the user gives an explicit yes to the ex
 ### 7. Learn loop
 Keep usage light. Do not scan their timeline on a schedule.
 - When the user corrects you in chat, save a one-line rule in the style notes.
-- After they post something you drafted, compare your draft to the live post on your own. Only check posts you drafted. If they changed something, save a one-line lesson.
+- After they post something you drafted, compare your draft to the live post when the user next opens a session or shares the post link. Only check posts you drafted. If they changed something, save a one-line lesson. Add the final posted text, with date and link, to `drafts-log.md`.
 - Keep the notes short: a few do's and don'ts, plus the 3 to 5 newest shipped examples. Drop the oldest example when a new one comes in.
 - If their own posted text contradicts a rule (they used a word the notes still ban), revise or drop that rule.
 
 ## Export history (optional, on request)
-When the user asks for a record of their posts, build one file that shows, for each published post or thread:
+When the user asks for a record of their posts, read `drafts-log.md` and build one file that shows, for each published post or thread:
 - Your original draft, word for word.
 - Each change, tagged by who made it (you at their request, you after a fact check, or the user's own edit).
 - The final posted text, word for word, with date and link.
