@@ -59,8 +59,10 @@ Send a bot the repo link and ask it to save the skills.
 ## Tested
 - Claude Code with Claude Opus 5.5 (November 2026): all three skills were picked up from their descriptions alone and followed their steps.
 - Grok Bot (November 2026): all three skills ran end to end.
-- Cursor (model: Auto, November 2026): research, digest and ghostwriting requests loaded the skills on their own. One short "is it true…" question was answered without the skill.
+- Cursor (model: Auto, November 2026): the skills loaded on their own. Agents sometimes said they had opened pages they only saw in search results, so check the sources they cite.
 - Codex: install path follows its docs, not tested live yet.
+
+Results depend on the model. The skills are plain instructions: a stronger model follows them closely, while a weaker one may skip a step or claim a check it didn't do, even when the skill itself is working.
 
 Tried a skill on another model or tool? Open an issue and say what worked and what didn't: https://github.com/yap-builder/yap-agent-skills/issues
 
