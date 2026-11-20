@@ -2,7 +2,7 @@
 name: dig-contract
 description: >-
   Use when the user drops a lead, claim, project, raise, product, or link and
-  wants to know what is real.
+  wants to know what is real, or asks whether something is true.
 ---
 # Dig contract
 
@@ -34,6 +34,8 @@ On a full dig, the brief is the top of the file and the text you send in chat. I
   - someone else's measurement (any number from a third party, such as Similarweb, a dashboard, or a report, even when you read it yourself)
   - own calculation (show the inputs)
   - own chain read (with time and time zone)
+
+  Use these four labels exactly as written. Don't invent new ones. A search result is not a page read: use "from a page" only for a page you opened yourself. If you only saw a fact in search results, open the page, or move the fact to Not found / not checked.
 - **Sentiment**, reach-weighted, if relevant.
 - **Bottom line:** what the evidence shows, and what it depends on.
 - **Self-challenge:** the weakest fact, or what would make the bottom line wrong. Required in every full-dig brief.

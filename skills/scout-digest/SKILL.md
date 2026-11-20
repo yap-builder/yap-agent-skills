@@ -21,7 +21,7 @@ The user names the topic. You propose defaults for scope, mode, and time window,
    3. **Trusted news:** outlets that link to their sources. Skip sites that rewrite others without links.
    4. **Newsletters:** good free newsletters on the topic, read on the web.
    5. **People (optional, needs X/Twitter access):** official project accounts, founders, researchers, and reporters other good sources keep citing.
-3. **Vet every source.** Open each source's page yourself before adding it. A search result is not a check.
+3. **Vet every source.** Open each source's page yourself before adding it. A search result is not a check. Say you opened a page only if you fetched it yourself.
    - Every site and handle exists and is the official one (linked from the project's own site). This applies to all sources, not only people.
    - For people, also check:
      - Real, checkable work (shipped code, published research, accurate past reporting or calls).
