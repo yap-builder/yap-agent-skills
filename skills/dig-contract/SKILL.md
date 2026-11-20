@@ -1,8 +1,6 @@
 ---
 name: dig-contract
-description: >-
-  Use when the user drops a lead, claim, project, raise, product, or link and
-  wants to know what is real, or asks whether something is true.
+description: "Use when the user drops a lead, claim, project, raise, product, or link and wants to know what is real, or asks whether something is true."
 ---
 # Dig contract
 

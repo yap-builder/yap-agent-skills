@@ -1,7 +1,6 @@
 ---
 name: ghostwriter
-description: >-
-  Use when the user wants an AI to draft social posts in their voice.
+description: "Use when the user wants an AI to draft social posts in their voice."
 ---
 # Ghostwriter
 

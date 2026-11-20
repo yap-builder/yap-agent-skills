@@ -1,8 +1,6 @@
 ---
 name: scout-digest
-description: >-
-  Use when the user wants a short recurring digest on a topic from a list of
-  sources or X/Twitter accounts, or an alert only when something big happens.
+description: "Use when the user wants a short recurring digest on a topic from a list of sources or X/Twitter accounts, or an alert only when something big happens."
 ---
 # Scout digest
 
