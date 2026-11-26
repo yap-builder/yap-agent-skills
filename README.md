@@ -87,7 +87,7 @@ The skills are tool-agnostic. They work best when your agent has:
 - A block explorer or public RPC for on-chain reads in dig-contract
 - A drafting tool (for example Typefully or Buffer) if you want ghostwriter to save unscheduled drafts
 
-None of these skills post, trade, or move funds. The ghostwriter skill may save an unscheduled draft in a drafting tool if you have one, and its own style notes and drafts log; you still publish it yourself. The other skills never post, trade or move funds; they only write their own local files (the dig brief, the digest config and log).
+None of these skills post, trade, or move funds. Each one writes only its own local files: dig-contract its brief, scout-digest its config and log, ghostwriter its style notes, drafts log, and an export file when you ask for one. Ghostwriter can also save an unscheduled draft in a drafting tool if you have one; you still publish it yourself.
 
 ## Contributing
 Issues and pull requests welcome. Keep skills short, practical, and tool-agnostic.
