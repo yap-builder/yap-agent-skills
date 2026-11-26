@@ -1,20 +1,35 @@
 # yap-agent-skills
 
-Free, plain-text skills for AI agents doing research, daily digests, and ghostwriting. Works in Claude Code, Cursor, Codex, and Grok Bot.
+Skills that make your AI agent check a claim before you believe it: primary sources, its own on-chain read for crypto claims, every fact labeled. Plus daily digests and ghostwriting.
 
-Each skill is a folder with a `SKILL.md` file (YAML frontmatter with `name` and `description`, then instructions). Your agent reads the description and loads the skill when it fits the task.
+For anyone who gets a claim, a raise, a project or a link and wants to know what is real before acting on it.
+
+dig-contract is the skill behind the Proof Hunter bot on Grok: https://x.ai/bot/UTHmG8NtAQP5_6mAxdPeT
+
+Free and plain text. Works in Claude Code, Cursor, Codex, and Grok Bot. Each skill is a folder with a `SKILL.md` file (YAML frontmatter with `name` and `description`, then instructions). Your agent reads the description and loads the skill when it fits the task.
 
 ## Skills
 
 | Skill | What it does |
 | --- | --- |
-| [dig-contract](skills/dig-contract/SKILL.md) | Research a lead or claim: quick check first, primary sources, own read-only on-chain read, and a 500-word findings brief with labeled facts, a required self-challenge, Details in the same file, and no verdict. |
+| [dig-contract](skills/dig-contract/SKILL.md) | The claim checker behind Proof Hunter (not a smart-contract auditor). Research a lead or claim: quick check first, primary sources, own read-only on-chain read, and a findings brief of 500 words or less with labeled facts, a required self-challenge, Details in the same file, and no verdict. |
+
+### Also in this pack
+
+| Skill | What it does |
+| --- | --- |
 | [scout-digest](skills/scout-digest/SKILL.md) | Turn a list of trusted sources into a short daily digest (what happened, why it matters, links), with a silent-unless-big alert mode. |
 | [ghostwriter](skills/ghostwriter/SKILL.md) | Draft social posts in your voice from a link, text, or voice note. Reads style notes first, offers 1 to 3 options, and learns from your edits and posts. Can export a draft vs posted history. Never publishes. |
 
 ## Install
 
-For Claude Code, Cursor, and Codex: clone the repo, then copy (or symlink) the skill folders you want into your tool's skills folder.
+If your agent can install it for you, send it this prompt:
+
+```text
+Install the skills from https://github.com/yap-builder/yap-agent-skills: clone it, copy the folders under skills/ into my skills folder (Claude Code: ~/.claude/skills/, Cursor or Codex: ~/.agents/skills/), then tell me to restart.
+```
+
+To do it by hand: for Claude Code, Cursor, and Codex, clone the repo, then copy (or symlink) the skill folders you want into your tool's skills folder.
 
 ```bash
 git clone https://github.com/yap-builder/yap-agent-skills.git
@@ -72,7 +87,7 @@ The skills are tool-agnostic. They work best when your agent has:
 - A block explorer or public RPC for on-chain reads in dig-contract
 - A drafting tool (for example Typefully or Buffer) if you want ghostwriter to save unscheduled drafts
 
-None of these skills post, trade, or move funds. The ghostwriter skill may save an unscheduled draft in a drafting tool if you have one; you still publish it yourself. The other skills are read-only.
+None of these skills post, trade, or move funds. The ghostwriter skill may save an unscheduled draft in a drafting tool if you have one, and its own style notes and drafts log; you still publish it yourself. The other skills never post, trade or move funds; they only write their own local files (the dig brief, the digest config and log).
 
 ## Contributing
 Issues and pull requests welcome. Keep skills short, practical, and tool-agnostic.
